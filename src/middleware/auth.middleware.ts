@@ -1,4 +1,4 @@
-import { Context, Next } from 'hono';
+import type { Context, Next } from 'hono';
 import { env } from '../config/env.js';
 
 // Parse API keys from comma-separated string
