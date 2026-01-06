@@ -5,8 +5,12 @@ import {HumanMessage} from '@langchain/core/messages';
 import {env} from '../config/env.js';
 import {writeFile} from 'fs/promises';
 import {join} from 'path';
+import {apiKeyAuth} from '../middleware/auth.middleware.js';
 
 const ragRouter = new Hono();
+
+// Apply authentication middleware to all routes
+ragRouter.use('*', apiKeyAuth);
 
 // Upload document endpoint
 ragRouter.post('/upload', async (c) => {

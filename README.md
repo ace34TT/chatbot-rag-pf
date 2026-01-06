@@ -83,8 +83,16 @@ PINECONE_INDEX_NAME=chatbot-rag
 # Google Gemini Configuration
 GOOGLE_API_KEY=your_google_api_key_here
 
+# API Authentication (comma-separated list of valid API keys)
+API_KEYS=your-secret-api-key-1,your-secret-api-key-2
+
 # Server Configuration
 PORT=3000
+```
+
+**Important**: Generate strong, random API keys for production. You can use:
+```bash
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
 3. **Build the project** (optional, for production):
@@ -110,6 +118,42 @@ npm run build
 npm start
 ```
 
+## Authentication
+
+All API endpoints (except the root endpoint `/`) require authentication via API key.
+
+### How to Authenticate
+
+Include your API key in the request header using one of these methods:
+
+**Method 1: X-API-Key header**
+```bash
+curl -H "X-API-Key: your-secret-api-key-1" http://localhost:3000/api/rag/health
+```
+
+**Method 2: Authorization Bearer token**
+```bash
+curl -H "Authorization: Bearer your-secret-api-key-1" http://localhost:3000/api/rag/health
+```
+
+### Error Responses
+
+**401 Unauthorized** - API key is missing:
+```json
+{
+  "error": "Unauthorized",
+  "message": "API key is required. Please provide it via X-API-Key header or Authorization Bearer token."
+}
+```
+
+**403 Forbidden** - API key is invalid:
+```json
+{
+  "error": "Forbidden",
+  "message": "Invalid API key."
+}
+```
+
 ## API Endpoints
 
 ### 1. Upload Document
@@ -126,6 +170,7 @@ Upload a PDF or TXT document for processing.
 
 ```bash
 curl -X POST http://localhost:3000/api/rag/upload \
+  -H "X-API-Key: your-secret-api-key-1" \
   -F "file=@document.pdf"
 ```
 
@@ -159,6 +204,7 @@ Ask questions about your uploaded documents.
 
 ```bash
 curl -X POST http://localhost:3000/api/rag/query \
+  -H "X-API-Key: your-secret-api-key-1" \
   -H "Content-Type: application/json" \
   -d '{"query": "What is the main topic?", "topK": 5}'
 ```
@@ -187,7 +233,8 @@ Remove a document and its vectors from the database.
 **Example:**
 
 ```bash
-curl -X DELETE http://localhost:3000/api/rag/documents/your-document-id
+curl -X DELETE http://localhost:3000/api/rag/documents/your-document-id \
+  -H "X-API-Key: your-secret-api-key-1"
 ```
 
 **Response:**
@@ -273,10 +320,13 @@ Verify the API service is running.
 - Efficient text chunking with overlap for context preservation
 
 ### Security
-- File type validation (PDF and TXT only)
-- File size limits (10MB max)
-- Environment variable validation on startup
-- No sensitive data in responses
+- **API Key Authentication**: All endpoints protected with middleware-based auth
+- **Multiple API Keys**: Support for comma-separated list of valid keys
+- **Flexible Auth Headers**: Accept both X-API-Key and Authorization Bearer formats
+- **File Type Validation**: Only PDF and TXT files allowed
+- **File Size Limits**: 10MB maximum upload size
+- **Environment Validation**: Zod schema validation on startup
+- **Secure Responses**: No sensitive data or keys exposed in API responses
 
 ## Future Enhancements
 

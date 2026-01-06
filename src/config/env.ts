@@ -5,6 +5,7 @@ const envSchema = z.object({
   PINECONE_API_KEY: z.string().min(1, 'Pinecone API key is required'),
   PINECONE_INDEX_NAME: z.string().min(1, 'Pinecone index name is required'),
   GOOGLE_API_KEY: z.string().min(1, 'Google API key is required'),
+  API_KEYS: z.string().min(1, 'At least one API key is required for authentication'),
   PORT: z.coerce.number().default(3000), // Coerce string to number
 });
 
