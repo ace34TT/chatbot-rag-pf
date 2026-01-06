@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="History">
+    <option name="requestHistoryStates">
+      <list>
+        <requestHistoryState>
+          <option name="dateTime" value="1767733059288" />
+          <option name="id" value="720e3831-7a7f-4958-ac34-2b06783bc555" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="file" value="$USER_HOME$/Downloads/Tafinasoa_Story_CV-1.pdf" />
+                  <option name="type" value="BINARY_FILE" />
+                </bodyState>
+              </option>
+              <option name="id" value="a2c098a9-f965-44d2-86c2-141bb220b698" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:3000/api/rag/upload" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJlcnJvciI6IkZhaWxlZCB0byB1cGxvYWQgZG9jdW1lbnQiLCJkZXRhaWxzIjoiQ29udGVudC1UeXBlIHdhcyBub3Qgb25lIG9mIFwibXVsdGlwYXJ0L2Zvcm0tZGF0YVwiIG9yIFwiYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkXCIuIn0=" />
+              <option name="bodyString" value="{&#10;  &quot;error&quot;: &quot;Failed to upload document&quot;,&#10;  &quot;details&quot;: &quot;Content-Type was not one of \&quot;multipart/form-data\&quot; or \&quot;application/x-www-form-urlencoded\&quot;.&quot;&#10;}" />
+              <option name="code" value="500" />
+              <option name="connectionEstablishingTime" value="66" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="access-control-allow-origin" />
+                    <option name="value" value="*" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-length" />
+                    <option name="value" value="143" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Tue, 06 Jan 2026 20:57:39 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=5" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="720e3831-7a7f-4958-ac34-2b06783bc555" />
+              <option name="message" value="Internal Server Error" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;error&quot;:&quot;Failed to upload document&quot;,&quot;details&quot;:&quot;Content-Type was not one of \&quot;multipart/form-data\&quot; or \&quot;application/x-www-form-urlencoded\&quot;.&quot;}" />
+              <option name="size" value="143" />
+              <option name="time" value="91" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1767733093603" />
+          <option name="id" value="54fa45a4-b660-41d0-86df-f5ce8b1441c3" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="file" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="/home/aceky/Downloads/Tafinasoa_Story_CV-1.pdf" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="a2c098a9-f965-44d2-86c2-141bb220b698" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:3000/api/rag/upload" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJlcnJvciI6IkZhaWxlZCB0byB1cGxvYWQgZG9jdW1lbnQiLCJkZXRhaWxzIjoiRmFpbGVkIHRvIGxvYWQgcGRmLXBhcnNlLiBUaGlzIGxvYWRlciBjdXJyZW50bHkgc3VwcG9ydHMgcGRmLXBhcnNlIHYxIG9ubHkuIFBsZWFzZSBpbnN0YWxsIHYxLCBlLmcuIGBucG0gaW5zdGFsbCBwZGYtcGFyc2VAXjFgICh2MiBpcyBub3QgeWV0IHN1cHBvcnRlZCkuIn0=" />
+              <option name="bodyString" value="{&#10;  &quot;error&quot;: &quot;Failed to upload document&quot;,&#10;  &quot;details&quot;: &quot;Failed to load pdf-parse. This loader currently supports pdf-parse v1 only. Please install v1, e.g. `npm install pdf-parse@^1` (v2 is not yet supported).&quot;&#10;}" />
+              <option name="code" value="500" />
+              <option name="connectionEstablishingTime" value="5" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="access-control-allow-origin" />
+                    <option name="value" value="*" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-length" />
+                    <option name="value" value="203" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Tue, 06 Jan 2026 20:58:13 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=5" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="54fa45a4-b660-41d0-86df-f5ce8b1441c3" />
+              <option name="message" value="Internal Server Error" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;error&quot;:&quot;Failed to upload document&quot;,&quot;details&quot;:&quot;Failed to load pdf-parse. This loader currently supports pdf-parse v1 only. Please install v1, e.g. `npm install pdf-parse@^1` (v2 is not yet supported).&quot;}" />
+              <option name="size" value="203" />
+              <option name="time" value="30" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1767733169939" />
+          <option name="id" value="2c74f423-4e89-4a3d-9892-c04697a873bd" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="file" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="/home/aceky/Downloads/Tafinasoa_Story_CV-1.pdf" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="a2c098a9-f965-44d2-86c2-141bb220b698" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:3000/api/rag/upload" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJlcnJvciI6IkZhaWxlZCB0byB1cGxvYWQgZG9jdW1lbnQiLCJkZXRhaWxzIjoiRmFpbGVkIHRvIGxvYWQgcGRmLXBhcnNlLiBUaGlzIGxvYWRlciBjdXJyZW50bHkgc3VwcG9ydHMgcGRmLXBhcnNlIHYxIG9ubHkuIFBsZWFzZSBpbnN0YWxsIHYxLCBlLmcuIGBucG0gaW5zdGFsbCBwZGYtcGFyc2VAXjFgICh2MiBpcyBub3QgeWV0IHN1cHBvcnRlZCkuIn0=" />
+              <option name="bodyString" value="{&#10;  &quot;error&quot;: &quot;Failed to upload document&quot;,&#10;  &quot;details&quot;: &quot;Failed to load pdf-parse. This loader currently supports pdf-parse v1 only. Please install v1, e.g. `npm install pdf-parse@^1` (v2 is not yet supported).&quot;&#10;}" />
+              <option name="code" value="500" />
+              <option name="connectionEstablishingTime" value="1" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="access-control-allow-origin" />
+                    <option name="value" value="*" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-length" />
+                    <option name="value" value="203" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Tue, 06 Jan 2026 20:59:29 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=5" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="2c74f423-4e89-4a3d-9892-c04697a873bd" />
+              <option name="message" value="Internal Server Error" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;error&quot;:&quot;Failed to upload document&quot;,&quot;details&quot;:&quot;Failed to load pdf-parse. This loader currently supports pdf-parse v1 only. Please install v1, e.g. `npm install pdf-parse@^1` (v2 is not yet supported).&quot;}" />
+              <option name="size" value="203" />
+              <option name="time" value="7" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1767733193295" />
+          <option name="id" value="8da18e69-71b9-4b24-8a3a-5e534ea1659d" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="file" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="/home/aceky/Downloads/Tafinasoa_Story_CV-1.pdf" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="a2c098a9-f965-44d2-86c2-141bb220b698" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:3000/api/rag/upload" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJlcnJvciI6IkZhaWxlZCB0byB1cGxvYWQgZG9jdW1lbnQiLCJkZXRhaWxzIjoiTWV0YWRhdGEgdmFsdWUgbXVzdCBiZSBhIHN0cmluZywgbnVtYmVyLCBib29sZWFuIG9yIGxpc3Qgb2Ygc3RyaW5ncywgZ290ICd7XCJsaW5lc1wiOntcImZyb21cIi4uLicgZm9yIGZpZWxkICdsb2MnIn0=" />
+              <option name="bodyString" value="{&#10;  &quot;error&quot;: &quot;Failed to upload document&quot;,&#10;  &quot;details&quot;: &quot;Metadata value must be a string, number, boolean or list of strings, got '{\&quot;lines\&quot;:{\&quot;from\&quot;...' for field 'loc'&quot;&#10;}" />
+              <option name="code" value="500" />
+              <option name="connectionEstablishingTime" value="1" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="access-control-allow-origin" />
+                    <option name="value" value="*" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-length" />
+                    <option name="value" value="164" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Tue, 06 Jan 2026 20:59:53 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=5" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="8da18e69-71b9-4b24-8a3a-5e534ea1659d" />
+              <option name="message" value="Internal Server Error" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;error&quot;:&quot;Failed to upload document&quot;,&quot;details&quot;:&quot;Metadata value must be a string, number, boolean or list of strings, got '{\&quot;lines\&quot;:{\&quot;from\&quot;...' for field 'loc'&quot;}" />
+              <option name="size" value="164" />
+              <option name="time" value="5888" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1767733359493" />
+          <option name="id" value="f013f87e-4c25-472a-97cb-1a7974bd2bca" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="file" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="/home/aceky/Downloads/Tafinasoa_Story_CV-1.pdf" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="a2c098a9-f965-44d2-86c2-141bb220b698" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:3000/api/rag/upload" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJzdWNjZXNzIjp0cnVlLCJkb2N1bWVudElkIjoiNGI4N2U0MGQtNmNiNi00OGZmLWJlYjMtNzU4OTdkNzU0M2NlIiwiZmlsZU5hbWUiOiJUYWZpbmFzb2FfU3RvcnlfQ1YtMS5wZGYiLCJtZXNzYWdlIjoiRG9jdW1lbnQgdXBsb2FkZWQgYW5kIHByb2Nlc3NlZCBzdWNjZXNzZnVsbHkifQ==" />
+              <option name="bodyString" value="{&#10;  &quot;success&quot;: true,&#10;  &quot;documentId&quot;: &quot;4b87e40d-6cb6-48ff-beb3-75897d7543ce&quot;,&#10;  &quot;fileName&quot;: &quot;Tafinasoa_Story_CV-1.pdf&quot;,&#10;  &quot;message&quot;: &quot;Document uploaded and processed successfully&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="connectionEstablishingTime" value="2" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="access-control-allow-origin" />
+                    <option name="value" value="*" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-length" />
+                    <option name="value" value="163" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Tue, 06 Jan 2026 21:02:39 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=5" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="f013f87e-4c25-472a-97cb-1a7974bd2bca" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;success&quot;:true,&quot;documentId&quot;:&quot;4b87e40d-6cb6-48ff-beb3-75897d7543ce&quot;,&quot;fileName&quot;:&quot;Tafinasoa_Story_CV-1.pdf&quot;,&quot;message&quot;:&quot;Document uploaded and processed successfully&quot;}" />
+              <option name="size" value="163" />
+              <option name="time" value="5338" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1767733545986" />
+          <option name="id" value="8490de41-93b1-4113-9df9-2f1b635494cf" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="file" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="/home/aceky/Downloads/Tafinasoa_Story_CV-1.pdf" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="a2c098a9-f965-44d2-86c2-141bb220b698" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:3000/api/rag/upload" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJzdWNjZXNzIjp0cnVlLCJkb2N1bWVudElkIjoiMDkwODFkMjktMzIxNC00NmJkLWFmMmYtOWY3ZTJkOTNkMzU5IiwiZmlsZU5hbWUiOiJUYWZpbmFzb2FfU3RvcnlfQ1YtMS5wZGYiLCJtZXNzYWdlIjoiRG9jdW1lbnQgdXBsb2FkZWQgYW5kIHByb2Nlc3NlZCBzdWNjZXNzZnVsbHkifQ==" />
+              <option name="bodyString" value="{&#10;  &quot;success&quot;: true,&#10;  &quot;documentId&quot;: &quot;09081d29-3214-46bd-af2f-9f7e2d93d359&quot;,&#10;  &quot;fileName&quot;: &quot;Tafinasoa_Story_CV-1.pdf&quot;,&#10;  &quot;message&quot;: &quot;Document uploaded and processed successfully&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="connectionEstablishingTime" value="2" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="access-control-allow-origin" />
+                    <option name="value" value="*" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-length" />
+                    <option name="value" value="163" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Tue, 06 Jan 2026 21:05:45 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=5" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="8490de41-93b1-4113-9df9-2f1b635494cf" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;success&quot;:true,&quot;documentId&quot;:&quot;09081d29-3214-46bd-af2f-9f7e2d93d359&quot;,&quot;fileName&quot;:&quot;Tafinasoa_Story_CV-1.pdf&quot;,&quot;message&quot;:&quot;Document uploaded and processed successfully&quot;}" />
+              <option name="size" value="163" />
+              <option name="time" value="5367" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1767733711862" />
+          <option name="id" value="2c6a7097-2834-403a-beb0-cc32ef8224bd" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="file" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="/home/aceky/Downloads/Tafinasoa_Story_CV-1.pdf" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="a2c098a9-f965-44d2-86c2-141bb220b698" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:3000/api/rag/upload" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJlcnJvciI6IkZhaWxlZCB0byB1cGxvYWQgZG9jdW1lbnQiLCJkZXRhaWxzIjoiVGhlIEFQSSBrZXkgeW91IHByb3ZpZGVkIHdhcyByZWplY3RlZCB3aGlsZSBjYWxsaW5nIGh0dHBzOi8vY2hhdGJvdC1yYWctNjU1ODc4Yy5zdmMuYXBlZC00NjI3LWI3NGEucGluZWNvbmUuaW8vdmVjdG9ycy91cHNlcnQuIFBsZWFzZSBjaGVjayB5b3VyIGNvbmZpZ3VyYXRpb24gdmFsdWVzIGFuZCB0cnkgYWdhaW4uIFlvdSBjYW4gZmluZCB0aGUgY29uZmlndXJhdGlvbiB2YWx1ZXMgZm9yIHlvdXIgcHJvamVjdCBpbiB0aGUgUGluZWNvbmUgZGV2ZWxvcGVyIGNvbnNvbGUgYXQgaHR0cHM6Ly9hcHAucGluZWNvbmUuaW8ifQ==" />
+              <option name="bodyString" value="{&#10;  &quot;error&quot;: &quot;Failed to upload document&quot;,&#10;  &quot;details&quot;: &quot;The API key you provided was rejected while calling https://chatbot-rag-655878c.svc.aped-4627-b74a.pinecone.io/vectors/upsert. Please check your configuration values and try again. You can find the configuration values for your project in the Pinecone developer console at https://app.pinecone.io&quot;&#10;}" />
+              <option name="code" value="500" />
+              <option name="connectionEstablishingTime" value="1" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="access-control-allow-origin" />
+                    <option name="value" value="*" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-length" />
+                    <option name="value" value="346" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Tue, 06 Jan 2026 21:08:31 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=5" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="2c6a7097-2834-403a-beb0-cc32ef8224bd" />
+              <option name="message" value="Internal Server Error" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;error&quot;:&quot;Failed to upload document&quot;,&quot;details&quot;:&quot;The API key you provided was rejected while calling https://chatbot-rag-655878c.svc.aped-4627-b74a.pinecone.io/vectors/upsert. Please check your configuration values and try again. You can find the configuration values for your project in the Pinecone developer console at https://app.pinecone.io&quot;}" />
+              <option name="size" value="346" />
+              <option name="time" value="4309" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1767733854062" />
+          <option name="id" value="0608a4e1-7324-4280-9d3a-958f237a7203" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="file" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="/home/aceky/Downloads/Tafinasoa_Story_CV-1.pdf" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="a2c098a9-f965-44d2-86c2-141bb220b698" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:3000/api/rag/upload" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJlcnJvciI6IkZhaWxlZCB0byB1cGxvYWQgZG9jdW1lbnQiLCJkZXRhaWxzIjoiVGhlIEFQSSBrZXkgeW91IHByb3ZpZGVkIHdhcyByZWplY3RlZCB3aGlsZSBjYWxsaW5nIGh0dHBzOi8vY2hhdGJvdC1yYWctNjU1ODc4Yy5zdmMuYXBlZC00NjI3LWI3NGEucGluZWNvbmUuaW8vdmVjdG9ycy91cHNlcnQuIFBsZWFzZSBjaGVjayB5b3VyIGNvbmZpZ3VyYXRpb24gdmFsdWVzIGFuZCB0cnkgYWdhaW4uIFlvdSBjYW4gZmluZCB0aGUgY29uZmlndXJhdGlvbiB2YWx1ZXMgZm9yIHlvdXIgcHJvamVjdCBpbiB0aGUgUGluZWNvbmUgZGV2ZWxvcGVyIGNvbnNvbGUgYXQgaHR0cHM6Ly9hcHAucGluZWNvbmUuaW8ifQ==" />
+              <option name="bodyString" value="{&#10;  &quot;error&quot;: &quot;Failed to upload document&quot;,&#10;  &quot;details&quot;: &quot;The API key you provided was rejected while calling https://chatbot-rag-655878c.svc.aped-4627-b74a.pinecone.io/vectors/upsert. Please check your configuration values and try again. You can find the configuration values for your project in the Pinecone developer console at https://app.pinecone.io&quot;&#10;}" />
+              <option name="code" value="500" />
+              <option name="connectionEstablishingTime" value="1" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="access-control-allow-origin" />
+                    <option name="value" value="*" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-length" />
+                    <option name="value" value="346" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Tue, 06 Jan 2026 21:10:54 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=5" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="0608a4e1-7324-4280-9d3a-958f237a7203" />
+              <option name="message" value="Internal Server Error" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;error&quot;:&quot;Failed to upload document&quot;,&quot;details&quot;:&quot;The API key you provided was rejected while calling https://chatbot-rag-655878c.svc.aped-4627-b74a.pinecone.io/vectors/upsert. Please check your configuration values and try again. You can find the configuration values for your project in the Pinecone developer console at https://app.pinecone.io&quot;}" />
+              <option name="size" value="346" />
+              <option name="time" value="4142" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+        <requestHistoryState>
+          <option name="dateTime" value="1767733905566" />
+          <option name="id" value="7b52d9fd-2dff-4e66-875b-ff873c55ad8c" />
+          <option name="request">
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="formData">
+                    <list>
+                      <formDataParameterState>
+                        <option name="key" value="file" />
+                        <option name="type" value="FILE" />
+                        <option name="value" value="/home/aceky/Downloads/Tafinasoa_Story_CV-1.pdf" />
+                      </formDataParameterState>
+                    </list>
+                  </option>
+                  <option name="type" value="FORM_DATA" />
+                </bodyState>
+              </option>
+              <option name="id" value="a2c098a9-f965-44d2-86c2-141bb220b698" />
+              <option name="method" value="POST" />
+              <option name="name" value="Draft" />
+              <option name="url" value="http://localhost:3000/api/rag/upload" />
+            </requestState>
+          </option>
+          <option name="response">
+            <responseState>
+              <option name="bodyBytesBase64" value="eyJzdWNjZXNzIjp0cnVlLCJkb2N1bWVudElkIjoiYjE0NTdhNTktMzUzYy00NWMyLWEyNTMtZjdiNmM2ZGZkNTY0IiwiZmlsZU5hbWUiOiJUYWZpbmFzb2FfU3RvcnlfQ1YtMS5wZGYiLCJtZXNzYWdlIjoiRG9jdW1lbnQgdXBsb2FkZWQgYW5kIHByb2Nlc3NlZCBzdWNjZXNzZnVsbHkifQ==" />
+              <option name="bodyString" value="{&#10;  &quot;success&quot;: true,&#10;  &quot;documentId&quot;: &quot;b1457a59-353c-45c2-a253-f7b6c6dfd564&quot;,&#10;  &quot;fileName&quot;: &quot;Tafinasoa_Story_CV-1.pdf&quot;,&#10;  &quot;message&quot;: &quot;Document uploaded and processed successfully&quot;&#10;}" />
+              <option name="code" value="200" />
+              <option name="connectionEstablishingTime" value="1" />
+              <option name="contentType" value="application/json" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="access-control-allow-origin" />
+                    <option name="value" value="*" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-type" />
+                    <option name="value" value="application/json" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="content-length" />
+                    <option name="value" value="163" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Date" />
+                    <option name="value" value="Tue, 06 Jan 2026 21:11:45 GMT" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Connection" />
+                    <option name="value" value="keep-alive" />
+                  </headerState>
+                  <headerState>
+                    <option name="key" value="Keep-Alive" />
+                    <option name="value" value="timeout=5" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="7b52d9fd-2dff-4e66-875b-ff873c55ad8c" />
+              <option name="message" value="OK" />
+              <option name="prettyResponseType" value="JSON" />
+              <option name="rawBodyString" value="{&quot;success&quot;:true,&quot;documentId&quot;:&quot;b1457a59-353c-45c2-a253-f7b6c6dfd564&quot;,&quot;fileName&quot;:&quot;Tafinasoa_Story_CV-1.pdf&quot;,&quot;message&quot;:&quot;Document uploaded and processed successfully&quot;}" />
+              <option name="size" value="163" />
+              <option name="time" value="10791" />
+            </responseState>
+          </option>
+          <option name="workspaceId" value="drafts" />
+        </requestHistoryState>
+      </list>
+    </option>
+  </component>
+</project>
