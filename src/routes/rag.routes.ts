@@ -66,7 +66,7 @@ ragRouter.post('/upload', async (c) => {
 // Query documents endpoint
 ragRouter.post('/query', async (c) => {
   try {
-    const {query, topK = 5} = await c.req.json();
+    const {query, topK = 5, similarityThreshold = 0.3} = await c.req.json();
 
     if (!query) {
       return c.json({error: 'Query is required'}, 400);
@@ -78,12 +78,63 @@ ragRouter.post('/query', async (c) => {
     const relevantDocs = await documentService.queryDocuments(query, topK);
     console.log(`Found ${relevantDocs.length} relevant documents`);
 
+    // Check if we have any documents
     if (relevantDocs.length === 0) {
+      console.log('No documents in index, responding conversationally');
+
+      const llm = new ChatGoogleGenerativeAI({
+        model: 'gemini-2.5-flash',
+        apiKey: env.GOOGLE_API_KEY,
+        temperature: 0.7,
+      });
+
+      const response = await llm.invoke([
+        new HumanMessage(`You are a helpful AI assistant for Tafinasoa Rabenandrasana's portfolio. The user said: "${query}".
+Respond warmly and let them know that you can help answer questions about Tafinasoa's experience, skills, and projects once documents are uploaded.`)
+      ]);
+
+      const answer = typeof response.content === 'string'
+          ? response.content
+          : JSON.stringify(response.content);
+
       return c.json({
-        answer: 'No relevant documents found. Please upload documents first.',
+        answer,
         sources: [],
+        conversational: true,
       });
     }
+
+    // Check similarity scores - if the best match is below threshold, treat as conversational
+    const bestScore = relevantDocs[0]?.score || 0;
+    console.log(`Best similarity score: ${bestScore}`);
+
+    if (bestScore < similarityThreshold) {
+      console.log(`Score ${bestScore} below threshold ${similarityThreshold}, treating as conversational`);
+
+      const llm = new ChatGoogleGenerativeAI({
+        model: 'gemini-2.5-flash',
+        apiKey: env.GOOGLE_API_KEY,
+        temperature: 0.7,
+      });
+
+      const response = await llm.invoke([
+        new HumanMessage(`You are a helpful AI assistant for Tafinasoa Rabenandrasana's portfolio. The user said: "${query}".
+Respond warmly and professionally. If it's a greeting, welcome them and offer to help answer questions about Tafinasoa's experience, skills, education, or projects.`)
+      ]);
+
+      const answer = typeof response.content === 'string'
+          ? response.content
+          : JSON.stringify(response.content);
+
+      return c.json({
+        answer,
+        sources: [],
+        conversational: true,
+      });
+    }
+
+    // High similarity score - use RAG mode
+    console.log('High similarity score, using RAG mode');
 
     // Prepare context for LLM
     const context = relevantDocs
@@ -92,21 +143,28 @@ ragRouter.post('/query', async (c) => {
 
     console.log('Generating answer with Gemini...');
 
-    // Generate answer using Gemini
+    // Generate answer using Gemini with strict context adherence
     const llm = new ChatGoogleGenerativeAI({
       model: 'gemini-2.5-flash',
       apiKey: env.GOOGLE_API_KEY,
-      temperature: 0.7,
+      temperature: 0.1,
     });
 
-    const prompt = `You are a helpful assistant. Use the following context to answer the user's question. If the answer cannot be found in the context, say so.
+    const prompt = `You are an AI assistant helping visitors learn about Tafinasoa Rabenandrasana's professional background. Answer questions using ONLY the information from the provided context.
 
-      Context:
-      ${context}
-      
-      Question: ${query}
-      
-      Answer:`;
+Rules:
+1. Answer using ONLY information from the context below
+2. If the answer is not in the context, say: "I don't have that specific information in the available documents. Please ask about Tafinasoa's experience, skills, education, or projects."
+3. Do NOT use external knowledge or make assumptions
+4. Be professional, concise, and helpful
+5. When discussing experience or skills, reference specific details from the context
+
+Context:
+${context}
+
+Question: ${query}
+
+Answer:`;
 
     const response = await llm.invoke([
       new HumanMessage(prompt)
