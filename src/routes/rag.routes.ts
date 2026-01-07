@@ -90,7 +90,9 @@ ragRouter.post('/query', async (c) => {
 
       const response = await llm.invoke([
         new HumanMessage(`You are a helpful AI assistant for Tafinasoa Rabenandrasana's portfolio. The user said: "${query}".
-Respond warmly and let them know that you can help answer questions about Tafinasoa's experience, skills, and projects once documents are uploaded.`)
+Respond warmly and let them know that you can help answer questions about Tafinasoa's experience, skills, and projects once documents are uploaded.
+
+IMPORTANT: Respond in the SAME LANGUAGE as the user's message. If they wrote in French, respond in French. If in English, respond in English.`)
       ]);
 
       const answer = typeof response.content === 'string'
@@ -119,7 +121,9 @@ Respond warmly and let them know that you can help answer questions about Tafina
 
       const response = await llm.invoke([
         new HumanMessage(`You are a helpful AI assistant for Tafinasoa Rabenandrasana's portfolio. The user said: "${query}".
-Respond warmly and professionally. If it's a greeting, welcome them and offer to help answer questions about Tafinasoa's experience, skills, education, or projects.`)
+Respond warmly and professionally. If it's a greeting, welcome them and offer to help answer questions about Tafinasoa's experience, skills, education, or projects.
+
+IMPORTANT: Respond in the SAME LANGUAGE as the user's message. If they wrote in French, respond in French. If in English, respond in English.`)
       ]);
 
       const answer = typeof response.content === 'string'
@@ -154,10 +158,11 @@ Respond warmly and professionally. If it's a greeting, welcome them and offer to
 
 Rules:
 1. Answer using ONLY information from the context below
-2. If the answer is not in the context, say: "I don't have that specific information in the available documents. Please ask about Tafinasoa's experience, skills, education, or projects."
+2. If the answer is not in the context, say in the user's language that you don't have that specific information and suggest asking about Tafinasoa's experience, skills, education, or projects
 3. Do NOT use external knowledge or make assumptions
 4. Be professional, concise, and helpful
 5. When discussing experience or skills, reference specific details from the context
+6. IMPORTANT: Respond in the SAME LANGUAGE as the question. If the question is in French, answer in French. If in English, answer in English.
 
 Context:
 ${context}
